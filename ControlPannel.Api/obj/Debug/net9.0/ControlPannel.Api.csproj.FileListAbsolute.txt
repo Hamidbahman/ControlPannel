@@ -530,7 +530,6 @@ C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debu
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\controlpannel.api.csproj.CoreCompileInputs.cache
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\controlpannel.api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\controlpannel.api.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\controlpannel.api.sourcelink.json
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\scopedcss\bundle\controlpannel.api.styles.css
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\staticwebassets.development.json
@@ -541,6 +540,6 @@ C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debu
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.controlpannel.api.props
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.controlpannel.api.props
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\controlp.99B04E69.Up2Date
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\controlpannel.api.genruntimeconfig.cache
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.api\obj\Debug\net9.0\ref\controlpannel.api.dll
+C:\Users\hamid.RYMOND\26\securitySystem\controlpannel\controlpannel.api\obj\Debug\net9.0\ControlP.396C2549.Up2Date

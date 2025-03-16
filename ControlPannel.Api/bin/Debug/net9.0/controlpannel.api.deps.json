@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "controlpannel.api/1.0.0": {
+      "ControlPannel.Api/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
           "ControlPannel.Application": "1.0.0",
@@ -17,7 +17,7 @@
           "Swashbuckle.AspNetCore.SwaggerUI": "7.3.1"
         },
         "runtime": {
-          "controlpannel.api.dll": {}
+          "ControlPannel.Api.dll": {}
         }
       },
       "AutoMapper/14.0.0": {
@@ -1157,9 +1157,9 @@
           }
         }
       },
-      "controlpannel.domain/1.0.0": {
+      "ControlPannel.Domain/1.0.0": {
         "runtime": {
-          "controlpannel.domain.dll": {
+          "ControlPannel.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1167,13 +1167,13 @@
       },
       "ControlPannel.Infrastructure/1.0.0": {
         "dependencies": {
+          "ControlPannel.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.EntityFrameworkCore.Design": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.3",
           "Microsoft.Extensions.Configuration": "9.0.3",
-          "Microsoft.Extensions.Configuration.Json": "9.0.3",
-          "controlpannel.domain": "1.0.0"
+          "Microsoft.Extensions.Configuration.Json": "9.0.3"
         },
         "runtime": {
           "ControlPannel.Infrastructure.dll": {
@@ -1185,7 +1185,7 @@
     }
   },
   "libraries": {
-    "controlpannel.api/1.0.0": {
+    "ControlPannel.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1832,7 +1832,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "controlpannel.domain/1.0.0": {
+    "ControlPannel.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

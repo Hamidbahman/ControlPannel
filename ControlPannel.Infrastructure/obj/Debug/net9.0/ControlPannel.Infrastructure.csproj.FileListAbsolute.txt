@@ -39,7 +39,6 @@ C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructu
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.AssemblyInfo.cs
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.sourcelink.json
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.dll
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\refint\ControlPannel.Infrastructure.dll
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.pdb

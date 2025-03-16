@@ -49,6 +49,5 @@ C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\obj\Debug\net9.0\ControlPannel.Application.AssemblyInfoInputs.cache
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\obj\Debug\net9.0\ControlPannel.Application.AssemblyInfo.cs
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\obj\Debug\net9.0\ControlPannel.Application.csproj.CoreCompileInputs.cache
-C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\obj\Debug\net9.0\ControlPannel.Application.sourcelink.json
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\obj\Debug\net9.0\ControlP.4A8AFD7E.Up2Date
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\ControlPannel.Application\obj\Debug\net9.0\ref\ControlPannel.Application.dll

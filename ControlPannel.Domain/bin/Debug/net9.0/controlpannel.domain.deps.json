@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "controlpannel.domain/1.0.0": {
+      "ControlPannel.Domain/1.0.0": {
         "runtime": {
-          "controlpannel.domain.dll": {}
+          "ControlPannel.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "controlpannel.domain/1.0.0": {
+    "ControlPannel.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

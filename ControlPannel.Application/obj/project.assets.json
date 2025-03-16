@@ -1739,27 +1739,27 @@
           }
         }
       },
-      "controlpannel.domain/1.0.0": {
+      "ControlPannel.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/controlpannel.domain.dll": {}
+          "bin/placeholder/ControlPannel.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/controlpannel.domain.dll": {}
+          "bin/placeholder/ControlPannel.Domain.dll": {}
         }
       },
       "ControlPannel.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "ControlPannel.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.EntityFrameworkCore.Design": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.3",
           "Microsoft.Extensions.Configuration": "9.0.3",
-          "Microsoft.Extensions.Configuration.Json": "9.0.3",
-          "controlpannel.domain": "1.0.0"
+          "Microsoft.Extensions.Configuration.Json": "9.0.3"
         },
         "compile": {
           "bin/placeholder/ControlPannel.Infrastructure.dll": {}
@@ -5056,10 +5056,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "controlpannel.domain/1.0.0": {
+    "ControlPannel.Domain/1.0.0": {
       "type": "project",
-      "path": "../controlpannel.domain/controlpannel.domain.csproj",
-      "msbuildProject": "../controlpannel.domain/controlpannel.domain.csproj"
+      "path": "../ControlPannel.Domain/ControlPannel.Domain.csproj",
+      "msbuildProject": "../ControlPannel.Domain/ControlPannel.Domain.csproj"
     },
     "ControlPannel.Infrastructure/1.0.0": {
       "type": "project",
@@ -5080,11 +5080,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\ControlPannel\\ControlPannel.Application\\ControlPannel.Application.csproj",
+      "projectUniqueName": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\controlpannel\\ControlPannel.Application\\ControlPannel.Application.csproj",
       "projectName": "ControlPannel.Application",
-      "projectPath": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\ControlPannel\\ControlPannel.Application\\ControlPannel.Application.csproj",
+      "projectPath": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\controlpannel\\ControlPannel.Application\\ControlPannel.Application.csproj",
       "packagesPath": "C:\\Users\\hamid.RYMOND\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\ControlPannel\\ControlPannel.Application\\obj\\",
+      "outputPath": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\controlpannel\\ControlPannel.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

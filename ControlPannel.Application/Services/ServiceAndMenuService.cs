@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
 using controlpannel.domain.RepositoryInterfaces;
 using controlpannel.Domain.Repositories;
 using ControlPannel.Domain.Entities;
-
-namespace controlpannel.application.Services;
 
 public class ServiceAndMenuService
 {
@@ -29,7 +25,9 @@ public class ServiceAndMenuService
         _appPackageRepo = appPackageRepo;
     }
 
-    public async Task<MenuServiceResult> GetAllMenusByApplicationId(long applicationId)
+    public async Task<MenuServiceResult> GetAllMenusByApplicationId(long applicationId, 
+        Expression<Func<Menu, object>> menuSortBy, bool menuDescending,
+        Expression<Func<Service, object>> serviceSortBy, bool serviceDescending)
     {
         var applicationPackages = await _appPackageRepo.GetApplicationPackageIdsByApplicationId(applicationId);
         var actees = new List<Actee>();
@@ -43,8 +41,11 @@ public class ServiceAndMenuService
 
             foreach (var actee in acteesByPackage)
             {
-                menus.AddRange(await _menuRepo.GetByActeeIdAsync(actee.Id));
-                services.AddRange(await _serviceRepo.GetAllServicesByActeeIdAsync(actee.Id));
+                var acteeMenus = await _menuRepo.GetByActeeIdAsync(actee.Id, menuSortBy, menuDescending);
+                menus.AddRange(acteeMenus);
+
+                var acteeServices = await _serviceRepo.GetAllServicesByActeeIdAsync(actee.Id, serviceSortBy, serviceDescending);
+                services.AddRange(acteeServices);
             }
         }
 

@@ -37,3 +37,15 @@ C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.domain\obj\D
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.domain\obj\Debug\net9.0\refint\controlpannel.domain.dll
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.domain\obj\Debug\net9.0\controlpannel.domain.pdb
 C:\Users\hamid.RYMOND\26\securitySystem\ControlPannel\controlpannel.domain\obj\Debug\net9.0\ref\controlpannel.domain.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.domain\bin\Debug\net9.0\controlpannel.domain.deps.json
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\bin\Debug\net9.0\controlpannel.domain.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\bin\Debug\net9.0\controlpannel.domain.pdb
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.AssemblyInfoInputs.cache
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.AssemblyInfo.cs
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.csproj.CoreCompileInputs.cache
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.sourcelink.json
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\refint\controlpannel.domain.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Domain\obj\Debug\net9.0\controlpannel.domain.pdb
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.domain\obj\Debug\net9.0\ref\controlpannel.domain.dll

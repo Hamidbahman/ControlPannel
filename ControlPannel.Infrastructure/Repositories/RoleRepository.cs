@@ -1,89 +1,66 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
+using controlpannel.domain.RepositoryInterfaces;
 using ControlPannel.Domain.Entities;
-using ControlPannel.Domain.Enums;
-using ControlPannel.Infrastructure.Data;
-using ControlPannel.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using ControlPannel.Infrastructure.Data;
 
-
-namespace controlpannel.infrastructure.Repositories;
-
-public class RoleRepository : IRoleRepository
+namespace controlpannel.infrastructure.Repositories
 {
-    private readonly SecurityDbContext dbContext;
+    public class RoleRepository : IRoleRepository
+    {
+        private readonly SecurityDbContext _context;
 
-        public Task AddAsync(Role role)
+        public RoleRepository(SecurityDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task DeleteAsync(long id)
+        public async Task AddRoleAsync(Role role)
         {
-            throw new NotImplementedException();
+            await _context.Roles.AddAsync(role);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<bool> ExistsAsync(string uuid)
+        public async Task<bool> DeleteRoleAsync(long id)
         {
-            throw new NotImplementedException();
+            var role = await _context.Roles.FindAsync(id);
+            if (role == null) return false;
+
+            _context.Roles.Remove(role);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<IEnumerable<Role>> GetAllAsync()
+        public async Task<Role> GetRoleByApplicationIdAsync(long applicationId)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Role>> GetByApplicationIdAsync(long applicationId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Role?> GetByIdAsync(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Role>> GetByStatusAsync(StatusTypes status)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Role?> GetByUuidAsync(string uuid)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<Permission>> GetPermissionsByRoleIdsAsync(List<long> roleIds)
-        {
-            throw new NotImplementedException();
+            return await _context.Roles.FirstOrDefaultAsync(r => r.ApplicationId == applicationId);
         }
 
         public async Task<Role?> GetRoleByIdAsync(long roleId)
-    {
-        return await dbContext.Roles
-            .Include(r => r.Permissions)
-            .FirstOrDefaultAsync(r => r.Id == roleId);
-    }
-
-        public Task<List<Role>> GetRolesByApplicationIdAsync(long applicationId)
         {
-            throw new NotImplementedException();
+            return await _context.Roles
+                .Include(r => r.Application) // Include related data if needed
+                .Include(r => r.UserRoles)
+                .Include(r => r.Permissions)
+                .FirstOrDefaultAsync(r => r.Id == roleId);
         }
 
-        public async Task<List<Role>> GetRolesByUserIdAsync(long userId)
-    {
-        return await dbContext.UserRoles
-            .Where(ur => ur.UserId == userId)
-            .Select(ur => ur.Role)
-            .Include(r => r.Permissions)
-            .ToListAsync();
-    }
-
-        public Task UpdateAsync(Role role)
+        public async Task<IEnumerable<Role>> GetRolesByApplicationIdAsync(long applicationId, Expression<Func<Role, object>> sortBy, bool descending)
         {
-            throw new NotImplementedException();
+            IQueryable<Role> query = _context.Roles.Where(r => r.ApplicationId == applicationId);
+            query = descending ? query.OrderByDescending(sortBy) : query.OrderBy(sortBy);
+
+            return await query.ToListAsync();
+        }
+
+        public async Task UpdateRoleAsync(Role role)
+        {
+            _context.Roles.Update(role);
+            await _context.SaveChangesAsync();
         }
     }
-
+}

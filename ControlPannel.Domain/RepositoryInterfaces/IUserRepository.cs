@@ -8,7 +8,8 @@ using ControlPannel.Domain.Enums;
 
 
 namespace ControlPannel.Infrastructure.Repositories;
-public interface IRoleRepository
+public interface IUserRepository
+
 {
     Task AddAsync(Role role);
     Task DeleteAsync(long id);

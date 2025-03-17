@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "up2jxKWv3T8=",
+  "dgSpecHash": "4glt6V1KcDE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hamid.RYMOND\\26\\securitySystem\\controlpannel\\ControlPannel.Application\\ControlPannel.Application.csproj",
+  "projectFilePath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Application\\ControlPannel.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hamid.RYMOND\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\hamid.RYMOND\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

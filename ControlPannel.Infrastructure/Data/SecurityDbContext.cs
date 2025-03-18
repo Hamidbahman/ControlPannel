@@ -1,5 +1,6 @@
 using System;
 using controlpannel.domain.Entities;
+using controlpannel.domain.Enums;
 using ControlPannel.Domain.Entities;
 using ControlPannel.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
@@ -52,24 +53,6 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
         entity.HasIndex(u => u.Email).IsUnique();
     });
 
-    modelBuilder.Entity<Role>(entity =>
-    {
-        entity.HasKey(r => r.Id);
-        entity.Property(r => r.Uuid).IsRequired().HasMaxLength(40);
-        entity.Property(r => r.Title).HasMaxLength(200);
-        entity.Property(r => r.Description).HasMaxLength(1000);
-
-        entity.HasMany(r => r.UserRoles)
-            .WithOne(ur => ur.Role)
-            .HasForeignKey(ur => ur.RoleId)
-            .OnDelete(DeleteBehavior.NoAction);  
-
-        entity.HasMany(r => r.Permissions)
-            .WithOne(p => p.Role)
-            .HasForeignKey(p => p.RoleId)
-            .OnDelete(DeleteBehavior.NoAction); 
-    });
-
     modelBuilder.Entity<UserRole>(entity =>
     {
         entity.HasKey(ur => ur.Id);
@@ -78,11 +61,6 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
             .WithMany(u => u.UserRoles)
             .HasForeignKey(ur => ur.UserId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        entity.HasOne(ur => ur.Role)
-            .WithMany(r => r.UserRoles)
-            .HasForeignKey(ur => ur.RoleId)
-            .OnDelete(DeleteBehavior.NoAction);  
     });
 
     modelBuilder.Entity<Permission>(entity =>
@@ -212,7 +190,113 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
             .OnDelete(DeleteBehavior.Cascade);
     });
 
-  
-        }
+    DateTime specificTime = new DateTime(2024, 1, 1, 12, 0, 0, DateTimeKind.Utc); 
+
+modelBuilder.Entity<User>().HasData(
+        new User(
+            id: 1,
+            uuid: "user-uuid-002",
+            firstName: "John",
+            lastName: "Doe",
+            nationalCode: "9876543210",
+            email: "john.doe@example.com",
+            mobile: "09123456789",
+            primaryKey: "john-primary-key",
+            ipRange: "0.0.0.0",
+            loginAttempt: 0,
+            scheduled: "00:00-23:59",
+            status: StatusTypes.Active,
+            twoFactor: false,
+            description: "Standard user",
+            createDate: specificTime,
+            modifyDate: specificTime,
+            deleteDate: null,
+            deleteUser: null,
+            modifyUser: null
+        )
+    );
+    modelBuilder.Entity<Aplication>().HasData(
+    new Aplication(
+        id: 1,
+        title: "Main Application",
+        clientId: "client-id-123",
+        createDate: specificTime,
+        modifyDate: specificTime,
+        redirectUrls: "https://example.com/callback",
+        clientScope: "openid profile",
+        clientSecret: "super-secure-secret",
+        authenticateGrantType: GrantType.AuthorizationCode,
+        ipRange: "192.168.1.0/24",
+        isAutoApprove: false,
+        scheduled: "00:00-23:59",
+        status: StatusTypes.Active,
+        lockEnabled: true,
+        description: "This is the main application for authentication"
+    )
+);
+    modelBuilder.Entity<ConfigurationPassword>().HasData(
+    new ConfigurationPassword(
+        userProperties: new List<UserProperty>(), // Empty list initially
+        createDate: new DateTime(2024, 1, 1, 12, 0, 0, DateTimeKind.Utc),
+        modifyDate: new DateTime(2024, 1, 1, 12, 0, 0, DateTimeKind.Utc),
+        deleteDate: new DateTime(9999, 12, 31), // No deletion
+        deleteUser: null,
+        modifyUser: null,
+        id: 1,  // Ensure this ID matches the one referenced in UserProperty
+        isComplex: false,
+        mustBeChangedInFirstLogin: false,
+        mustContainChar: false,
+        mustContainUpperCase: false,
+        isPolicyNeeded: false,
+        minPassLength: 8,
+        maxPassLength: 16,
+        numericPassNotEqual: 2,
+        willPassExpire: true,
+        expireDaysAmount: 90,
+        redirectToCustomUrlAfterChangePass: false,
+        urlAfterChangePass: "https://example.com/password-changed",
+        applicationId: 1, // Ensure this ApplicationId exists in Applications table
+        twoFactorEnabled: true
+    )
+);
+
+    modelBuilder.Entity<UserProperty>().HasData(
+        new UserProperty(
+            userId: 1,
+            password: "securepassword123",
+            configurationPasswordId: 1
+        )
+    );
+
+    modelBuilder.Entity<LoginPolicy>().HasData(
+        new LoginPolicy(
+            id: 1,
+            lockTypes: LockTypes.None,
+            userId: 1,
+            lockStartDateTime: specificTime,
+            lockEndDateTime: specificTime.AddMinutes(30),
+            createDate: specificTime,
+            modifyDate: specificTime,
+            deleteDate: null,
+            deleteUser: null,
+            modifyUser: null
+        )
+    );
+
+    modelBuilder.Entity<UserRole>().HasData(
+        new UserRole(
+            id: 1,
+            userId: 1,
+            roleId: 1,
+            isDefault: false,
+            createDate: specificTime,
+            modifyDate: specificTime,
+            deleteDate: null,
+            deleteUser: null,
+            modifyUser: null
+        )
+    );
+}
     }
+
 

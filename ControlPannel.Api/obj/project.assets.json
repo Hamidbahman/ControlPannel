@@ -1822,47 +1822,47 @@
           }
         }
       },
-      "ControlPannel.Application/1.0.0": {
+      "controlpannel.application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "AutoMapper": "14.0.0",
-          "ControlPannel.Infrastructure": "1.0.0"
+          "controlpannel.infrastructure": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/ControlPannel.Application.dll": {}
+          "bin/placeholder/controlpannel.application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ControlPannel.Application.dll": {}
+          "bin/placeholder/controlpannel.application.dll": {}
         }
       },
-      "ControlPannel.Domain/1.0.0": {
+      "controlpannel.domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/ControlPannel.Domain.dll": {}
+          "bin/placeholder/controlpannel.domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ControlPannel.Domain.dll": {}
+          "bin/placeholder/controlpannel.domain.dll": {}
         }
       },
-      "ControlPannel.Infrastructure/1.0.0": {
+      "controlpannel.infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "ControlPannel.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.EntityFrameworkCore.Design": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.3",
           "Microsoft.Extensions.Configuration": "9.0.3",
-          "Microsoft.Extensions.Configuration.Json": "9.0.3"
+          "Microsoft.Extensions.Configuration.Json": "9.0.3",
+          "controlpannel.domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/ControlPannel.Infrastructure.dll": {}
+          "bin/placeholder/controlpannel.infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ControlPannel.Infrastructure.dll": {}
+          "bin/placeholder/controlpannel.infrastructure.dll": {}
         }
       }
     }
@@ -5256,31 +5256,31 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "ControlPannel.Application/1.0.0": {
+    "controlpannel.application/1.0.0": {
       "type": "project",
-      "path": "../ControlPannel.Application/ControlPannel.Application.csproj",
-      "msbuildProject": "../ControlPannel.Application/ControlPannel.Application.csproj"
+      "path": "../controlpannel.application/controlpannel.application.csproj",
+      "msbuildProject": "../controlpannel.application/controlpannel.application.csproj"
     },
-    "ControlPannel.Domain/1.0.0": {
+    "controlpannel.domain/1.0.0": {
       "type": "project",
-      "path": "../ControlPannel.Domain/ControlPannel.Domain.csproj",
-      "msbuildProject": "../ControlPannel.Domain/ControlPannel.Domain.csproj"
+      "path": "../controlpannel.domain/controlpannel.domain.csproj",
+      "msbuildProject": "../controlpannel.domain/controlpannel.domain.csproj"
     },
-    "ControlPannel.Infrastructure/1.0.0": {
+    "controlpannel.infrastructure/1.0.0": {
       "type": "project",
-      "path": "../ControlPannel.Infrastructure/ControlPannel.Infrastructure.csproj",
-      "msbuildProject": "../ControlPannel.Infrastructure/ControlPannel.Infrastructure.csproj"
+      "path": "../controlpannel.infrastructure/controlpannel.infrastructure.csproj",
+      "msbuildProject": "../controlpannel.infrastructure/controlpannel.infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "AutoMapper >= 14.0.0",
-      "ControlPannel.Application >= 1.0.0",
-      "ControlPannel.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
       "Swashbuckle.AspNetCore.Swagger >= 7.3.1",
       "Swashbuckle.AspNetCore.SwaggerGen >= 7.3.1",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 7.3.1"
+      "Swashbuckle.AspNetCore.SwaggerUI >= 7.3.1",
+      "controlpannel.application >= 1.0.0",
+      "controlpannel.infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5290,9 +5290,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.api\\ControlPannel.Api.csproj",
-      "projectName": "ControlPannel.Api",
-      "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.api\\ControlPannel.Api.csproj",
+      "projectUniqueName": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.api\\controlpannel.api.csproj",
+      "projectName": "controlpannel.api",
+      "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.api\\controlpannel.api.csproj",
       "packagesPath": "C:\\Users\\hamid.RYMOND\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.api\\obj\\",
       "projectStyle": "PackageReference",
@@ -5315,11 +5315,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Application\\ControlPannel.Application.csproj": {
-              "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Application\\ControlPannel.Application.csproj"
+            "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.application\\controlpannel.application.csproj": {
+              "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.application\\controlpannel.application.csproj"
             },
-            "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\ControlPannel.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\ControlPannel.Infrastructure.csproj"
+            "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\controlpannel.infrastructure.csproj": {
+              "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\controlpannel.infrastructure.csproj"
             }
           }
         }

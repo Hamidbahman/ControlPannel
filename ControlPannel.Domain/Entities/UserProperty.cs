@@ -1,16 +1,15 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ControlPannel.Domain.Entities;
 
 namespace ControlPannel.Domain.Entities;
-
-[Table("tbUserProperty")]
 public class UserProperty
 {
     [Key]
     public long UserId { get; private set; }
-    
-    public User? User { get; private set; } = null!;
+
+    [ForeignKey("UserId")]
+    public User User { get; private set; } = null!;
 
     [Required]
     [StringLength(255)]
@@ -28,9 +27,5 @@ public class UserProperty
         UserId = userId;
         Password = password;
         ConfigurationPasswordId = configurationPasswordId;
-    }
-    public void UpdatePassword(string newPassword)
-    {
-        Password = newPassword;
     }
 }

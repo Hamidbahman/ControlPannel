@@ -1087,8 +1087,9 @@
       },
       "ControlPannel.Domain/1.0.0": {
         "runtime": {
-          "controlpannel.domain.dll": {
-            "fileVersion": "0.0.0.0"
+          "ControlPannel.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }

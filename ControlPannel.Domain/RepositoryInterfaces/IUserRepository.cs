@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ControlPannel.Domain.Entities;
 using ControlPannel.Domain.Enums;
@@ -7,42 +8,15 @@ using ControlPannel.Domain.Enums;
 
 
 
-namespace ControlPannel.Infrastructure.Repositories;
+namespace ControlPannel.Domain.Repositories;
 public interface IUserRepository
-
 {
-    Task AddAsync(Role role);
-    Task DeleteAsync(long id);
-    Task<bool> ExistsAsync(string uuid);
-
-
-        Task<IEnumerable<Role>> GetAllAsync();
-
-
-        Task<IEnumerable<Role>> GetByApplicationIdAsync(long applicationId);
-
-
-        Task<Role?> GetByIdAsync(long id);
-
-
-        Task<IEnumerable<Role>> GetByStatusAsync(StatusTypes status);
-
-
-        Task<Role?> GetByUuidAsync(string uuid);
-
-
-        Task<List<Permission>> GetPermissionsByRoleIdsAsync(List<long> roleIds);
-
-
-        Task<Role?> GetRoleByIdAsync(long roleId);
-
-
-        Task<List<Role>> GetRolesByApplicationIdAsync(long applicationId);
-
-        Task<List<Role>> GetRolesByUserIdAsync(long userId);
-
-
-        Task UpdateAsync(Role role);
-
-    }
+    Task<List<User>> GetAllUsersAsync(Expression<Func<User, object>> sortBy, bool descending);
+    Task<User> GetUserByEmailAsync(string email);
+    Task<User> GetUserByIdAsync(long id);
+    Task<User> GetUserByFirstNameAsync(string firstName);
+    Task AddUserAsync(User user);
+    Task UpdateUserAsync(User user);
+    Task<bool> deleteUserAsync(long id);
+}
 

@@ -17,8 +17,6 @@ public class User : BaseEntity
     public string PrimaryKey {get; private set;}
     public string IpRange {get; private set;}
     public int LoginAttempt {get; private set;}
-    public string Picture {get; private set;}
-    public string PictureType {get; private set;}
     public string Scheduled {get; private set;}
     public StatusTypes Status {get; private set;}
     public bool TwoFactor {get; private set;}
@@ -43,8 +41,6 @@ public class User : BaseEntity
         string primaryKey,
         string ipRange,
         int loginAttempt,
-        string picture,
-        string pictureType,
         string scheduled,
         StatusTypes status,
         bool twoFactor,
@@ -64,8 +60,6 @@ public class User : BaseEntity
         PrimaryKey = primaryKey;
         IpRange = ipRange;
         LoginAttempt = loginAttempt;
-        Picture = picture;
-        PictureType = pictureType;
         Scheduled = scheduled;
         Status = status;
         TwoFactor = twoFactor;

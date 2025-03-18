@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Services\.config\dotnet-tools.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ControlPannel.Infrastructure\ControlPannel.Infrastructure.csproj" />
   </ItemGroup>
 

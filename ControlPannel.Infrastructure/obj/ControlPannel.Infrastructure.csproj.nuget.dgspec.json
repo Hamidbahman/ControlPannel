@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\ControlPannel.Infrastructure.csproj": {}
+    "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\controlpannel.infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj": {
+    "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj",
-        "projectName": "ControlPannel.Domain",
-        "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj",
+        "projectName": "controlpannel.domain",
+        "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj",
         "packagesPath": "C:\\Users\\hamid.RYMOND\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\obj\\",
+        "outputPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\ControlPannel.Infrastructure.csproj": {
+    "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\controlpannel.infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\ControlPannel.Infrastructure.csproj",
-        "projectName": "ControlPannel.Infrastructure",
-        "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\ControlPannel.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\controlpannel.infrastructure.csproj",
+        "projectName": "controlpannel.infrastructure",
+        "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\controlpannel.infrastructure.csproj",
         "packagesPath": "C:\\Users\\hamid.RYMOND\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj": {
-                "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj"
+              "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj": {
+                "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj"
               }
             }
           }

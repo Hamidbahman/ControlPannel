@@ -67,5 +67,5 @@ C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\bin\De
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\bin\Debug\net9.0\ControlPannel.Infrastructure.dll
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\bin\Debug\net9.0\ControlPannel.Infrastructure.pdb
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\bin\Debug\net9.0\controlpannel.domain.pdb
-C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\obj\Debug\net9.0\ControlP.4A8AFD7E.Up2Date
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\obj\Debug\net9.0\ref\ControlPannel.Application.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Application\obj\Debug\net9.0\ControlP.4A8AFD7E.Up2Date

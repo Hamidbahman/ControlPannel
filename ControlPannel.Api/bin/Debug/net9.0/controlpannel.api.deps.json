@@ -6,18 +6,18 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "ControlPannel.Api/1.0.0": {
+      "controlpannel.api/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
           "ControlPannel.Application": "1.0.0",
-          "ControlPannel.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.2",
           "Swashbuckle.AspNetCore.Swagger": "7.3.1",
           "Swashbuckle.AspNetCore.SwaggerGen": "7.3.1",
-          "Swashbuckle.AspNetCore.SwaggerUI": "7.3.1"
+          "Swashbuckle.AspNetCore.SwaggerUI": "7.3.1",
+          "controlpannel.infrastructure": "1.0.0"
         },
         "runtime": {
-          "ControlPannel.Api.dll": {}
+          "controlpannel.api.dll": {}
         }
       },
       "AutoMapper/14.0.0": {
@@ -1148,7 +1148,7 @@
       "ControlPannel.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
-          "ControlPannel.Infrastructure": "1.0.0"
+          "controlpannel.infrastructure": "1.0.0"
         },
         "runtime": {
           "ControlPannel.Application.dll": {
@@ -1165,7 +1165,7 @@
           }
         }
       },
-      "ControlPannel.Infrastructure/1.0.0": {
+      "controlpannel.infrastructure/1.0.0": {
         "dependencies": {
           "ControlPannel.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
@@ -1176,7 +1176,7 @@
           "Microsoft.Extensions.Configuration.Json": "9.0.3"
         },
         "runtime": {
-          "ControlPannel.Infrastructure.dll": {
+          "controlpannel.infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1185,7 +1185,7 @@
     }
   },
   "libraries": {
-    "ControlPannel.Api/1.0.0": {
+    "controlpannel.api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1837,7 +1837,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ControlPannel.Infrastructure/1.0.0": {
+    "controlpannel.infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

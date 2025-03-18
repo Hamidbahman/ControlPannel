@@ -1723,14 +1723,14 @@
           }
         }
       },
-      "controlpannel.domain/1.0.0": {
+      "ControlPannel.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/controlpannel.domain.dll": {}
+          "bin/placeholder/ControlPannel.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/controlpannel.domain.dll": {}
+          "bin/placeholder/ControlPannel.Domain.dll": {}
         }
       }
     }
@@ -5006,21 +5006,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "controlpannel.domain/1.0.0": {
+    "ControlPannel.Domain/1.0.0": {
       "type": "project",
-      "path": "../controlpannel.domain/controlpannel.domain.csproj",
-      "msbuildProject": "../controlpannel.domain/controlpannel.domain.csproj"
+      "path": "../ControlPannel.Domain/ControlPannel.Domain.csproj",
+      "msbuildProject": "../ControlPannel.Domain/ControlPannel.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "ControlPannel.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.3",
       "Microsoft.Extensions.Configuration >= 9.0.3",
-      "Microsoft.Extensions.Configuration.Json >= 9.0.3",
-      "controlpannel.domain >= 1.0.0"
+      "Microsoft.Extensions.Configuration.Json >= 9.0.3"
     ]
   },
   "packageFolders": {
@@ -5055,8 +5055,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj": {
-              "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\controlpannel.domain\\controlpannel.domain.csproj"
+            "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj": {
+              "projectPath": "C:\\Users\\hamid.RYMOND\\AdminPannel\\controlpannel\\ControlPannel.Domain\\ControlPannel.Domain.csproj"
             }
           }
         }

@@ -48,6 +48,10 @@ public async Task<List<User>> GetAllUsersAsync(string sortBy, bool descending)
         return await query.ToListAsync();
     }
 
+    public Task<List<User>> GetAllUsersAsync(Expression<Func<User, object>> sortBy, bool descending)
+    {
+        throw new NotImplementedException();
+    }
 
     public async Task<User> GetUserByEmailAsync(string email)
     {
@@ -77,8 +81,4 @@ public async Task<List<User>> GetAllUsersAsync(string sortBy, bool descending)
         await _context.SaveChangesAsync();
     }
 
-    Task IUserRepository.deleteUserAsync(long id)
-    {
-        return deleteUserAsync(id);
-    }
 }

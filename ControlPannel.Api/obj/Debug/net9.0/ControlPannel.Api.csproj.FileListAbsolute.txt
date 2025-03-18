@@ -722,6 +722,6 @@ C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ControlPannel.Api.props
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ControlPannel.Api.props
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\ControlP.396C2549.Up2Date
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\ControlPannel.Api.genruntimeconfig.cache
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\ref\ControlPannel.Api.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.api\obj\Debug\net9.0\controlp.99B04E69.Up2Date

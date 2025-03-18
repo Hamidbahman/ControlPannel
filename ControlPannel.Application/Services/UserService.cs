@@ -1,6 +1,7 @@
 using System;
 using System.Linq.Expressions;
 using AutoMapper;
+using controlpannel.application.Dtos.UserDto;
 using ControlPannel.Domain.Entities;
 using ControlPannel.Domain.Repositories;
 using ControlPannel.Infrastructure.Repositories;
@@ -55,7 +56,7 @@ public class UserService
         return user != null ? _mapper.Map<UserDto>(user) : null;
     }
 
-    public async Task AddAsync(AddUserRequestDto dto)
+    public async Task AddUserAsync(AddUserRequestDto dto)
     {
         var entity = _mapper.Map<User>(dto);
         await _userRepo.AddUserAsync(entity);
@@ -63,7 +64,7 @@ public class UserService
 
     public async Task Update(UpdateUserRequestDto dto)
     {
-        var enttiy = _mapper.Map<User>(dto);
+        var entity = _mapper.Map<User>(dto);
         await _userRepo.UpdateUserAsync(entity);
     }
 

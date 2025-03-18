@@ -9,7 +9,7 @@
       "ControlPannel.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
-          "ControlPannel.Infrastructure": "1.0.0"
+          "controlpannel.infrastructure": "1.0.0"
         },
         "runtime": {
           "ControlPannel.Application.dll": {}
@@ -1099,7 +1099,7 @@
           }
         }
       },
-      "ControlPannel.Infrastructure/1.0.0": {
+      "controlpannel.infrastructure/1.0.0": {
         "dependencies": {
           "ControlPannel.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
@@ -1110,7 +1110,7 @@
           "Microsoft.Extensions.Configuration.Json": "9.0.3"
         },
         "runtime": {
-          "ControlPannel.Infrastructure.dll": {
+          "controlpannel.infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1731,7 +1731,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ControlPannel.Infrastructure/1.0.0": {
+    "controlpannel.infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

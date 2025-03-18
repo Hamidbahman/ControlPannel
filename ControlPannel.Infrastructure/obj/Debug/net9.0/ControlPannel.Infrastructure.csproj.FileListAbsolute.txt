@@ -63,9 +63,9 @@ C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.AssemblyInfo.cs
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.sourcelink.json
-C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlP.73094094.Up2Date
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.dll
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\refint\ControlPannel.Infrastructure.dll
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.pdb
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ControlPannel.Infrastructure.genruntimeconfig.cache
 C:\Users\hamid.RYMOND\AdminPannel\controlpannel\ControlPannel.Infrastructure\obj\Debug\net9.0\ref\ControlPannel.Infrastructure.dll
+C:\Users\hamid.RYMOND\AdminPannel\controlpannel\controlpannel.infrastructure\obj\Debug\net9.0\controlp.7F52ECB0.Up2Date

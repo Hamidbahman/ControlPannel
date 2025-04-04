@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "controlpannel.api/1.0.0": {
+      "ControlPannel.Api/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
           "ControlPannel.Application": "1.0.0",
@@ -17,7 +17,7 @@
           "controlpannel.infrastructure": "1.0.0"
         },
         "runtime": {
-          "controlpannel.api.dll": {}
+          "ControlPannel.Api.dll": {}
         }
       },
       "AutoMapper/14.0.0": {
@@ -1185,7 +1185,7 @@
     }
   },
   "libraries": {
-    "controlpannel.api/1.0.0": {
+    "ControlPannel.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

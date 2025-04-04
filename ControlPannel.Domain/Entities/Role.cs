@@ -7,7 +7,7 @@ namespace ControlPannel.Domain.Entities;
 [Table("tbRole")]
 public class Role : BaseEntity
 {
-    public string Uuid { get; private set; }
+    public Guid Uuid { get; private set; } = Guid.NewGuid();
     public AuthorityType Authority { get; private set; }
     public string Title { get; private set; }
     public string Description { get; private set; }
@@ -31,7 +31,7 @@ public class Role : BaseEntity
         DateTime? deleteDate,
         string? deleteUser,
         string? modifyUser,
-        string uuid,
+        Guid uuid,
         AuthorityType authority,
         string title,
         string description,

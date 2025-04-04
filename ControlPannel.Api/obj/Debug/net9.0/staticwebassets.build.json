@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "txlVimvqyh331H5dCx7JVJ1vGtv5iMZPe60rnbNn5fQ=",
-  "Source": "controlpannel.api",
-  "BasePath": "_content/controlpannel.api",
+  "Hash": "34OiLbDOnnuia8gcBJ4XPaMUIN4sFtSezwLl5myKXPQ=",
+  "Source": "ControlPannel.Api",
+  "BasePath": "_content/ControlPannel.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

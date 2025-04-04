@@ -8,7 +8,7 @@ namespace ControlPannel.Domain.Entities;
 [Table("tbUser")]
 public class User : BaseEntity
 {
-    public string Uuid { get; private set; }
+    public Guid Uuid { get; private set; } = Guid.NewGuid();
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string NationalCode { get; private set; }
@@ -35,7 +35,7 @@ public class User : BaseEntity
         DateTime? deleteDate,
         string? deleteUser,
         string? modifyUser,
-        string uuid,
+        Guid uuid,
         string firstName,
         string mobile,
         string primaryKey,

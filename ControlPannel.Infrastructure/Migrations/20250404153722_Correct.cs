@@ -6,17 +6,67 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ControlPannel.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Correct : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_Actee",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_Application",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_ApplicationPackage",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_ConfigurationLock",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_ConfigurationPassword",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_ConfigurationSession",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_Mask",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_Menu",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_Permission",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_Service",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_User",
+                schema: "dbo");
+
+            migrationBuilder.CreateSequence<int>(
+                name: "Seq_UserRole",
+                schema: "dbo");
+
             migrationBuilder.CreateTable(
                 name: "tbApplications",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_Application"),
                     Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     RedirectUrls = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     ClientId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -77,9 +127,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbUser",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Uuid = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_User"),
+                    Uuid = table.Column<Guid>(type: "uniqueidentifier", maxLength: 40, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     NationalCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -107,8 +156,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbApplicationPackage",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_ApplicationPackage"),
                     Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     ApplicationId = table.Column<long>(type: "bigint", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -132,8 +180,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbConfigurationLock",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_ConfigurationLock"),
                     CaptchaNeeded = table.Column<bool>(type: "bit", nullable: false),
                     FailedLoginAmountBeforeCaptcha = table.Column<short>(type: "smallint", nullable: false),
                     LockTimeInterval = table.Column<int>(type: "int", nullable: false),
@@ -160,8 +207,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbConfigurationPassword",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_ConfigurationPassword"),
                     IsComplex = table.Column<bool>(type: "bit", nullable: false),
                     MustBeChangedInFirstLogin = table.Column<bool>(type: "bit", nullable: false),
                     MustContainChar = table.Column<bool>(type: "bit", nullable: false),
@@ -197,8 +243,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbConfigurationSession",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_ConfigurationSession"),
                     IsConcurrentActive = table.Column<bool>(type: "bit", nullable: false),
                     ConcurrencyCount = table.Column<int>(type: "int", nullable: false),
                     SessionTimeout = table.Column<int>(type: "int", nullable: false),
@@ -282,8 +327,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbActee",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_Actee"),
                     Uuid = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     ActeeType = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
@@ -336,8 +380,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbMenu",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_Menu"),
                     MenuKey = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Priority = table.Column<int>(type: "int", nullable: false),
                     Icon = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
@@ -363,8 +406,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbService",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_Service"),
                     ServiceType = table.Column<int>(type: "int", nullable: false),
                     ServiceKey = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Rest = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
@@ -390,8 +432,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbMask",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_Mask"),
                     PermissionId = table.Column<long>(type: "bigint", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifyDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -408,8 +449,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbPermission",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_Permission"),
                     ActeeId = table.Column<long>(type: "bigint", nullable: false),
                     RoleId = table.Column<long>(type: "bigint", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
@@ -437,7 +477,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Uuid = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Uuid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Authority = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -471,8 +511,7 @@ namespace ControlPannel.Infrastructure.Migrations
                 name: "tbUserRole",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<long>(type: "bigint", nullable: false, defaultValueSql: "NEXT VALUE FOR dbo.Seq_UserRole"),
                     UserId = table.Column<long>(type: "bigint", nullable: false),
                     RoleId = table.Column<long>(type: "bigint", nullable: false),
                     IsDefault = table.Column<bool>(type: "bit", nullable: false),
@@ -498,36 +537,6 @@ namespace ControlPannel.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.InsertData(
-                table: "tbApplications",
-                columns: new[] { "Id", "AuthorizationGrandType", "ClientId", "ClientScope", "ClientSecret", "CreateDate", "DeleteDate", "DeleteUser", "Description", "IpRange", "IsAutoApprove", "LockEnabled", "ModifyDate", "ModifyUser", "RedirectUrls", "Scheduled", "Status", "Title" },
-                values: new object[] { 1L, 3, "client-id-123", "openid profile", "super-secure-secret", new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, null, "This is the main application for authentication", "192.168.1.0/24", false, true, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, "https://example.com/callback", "00:00-23:59", 0, "Main Application" });
-
-            migrationBuilder.InsertData(
-                table: "tbUser",
-                columns: new[] { "Id", "CreateDate", "DeleteDate", "DeleteUser", "Description", "Email", "FirstName", "IpRange", "LastName", "LoginAttempt", "Mobile", "ModifyDate", "ModifyUser", "NationalCode", "PrimaryKey", "Scheduled", "Status", "TwoFactor", "Uuid" },
-                values: new object[] { 1L, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, null, "Standard user", "john.doe@example.com", "John", "0.0.0.0", "Doe", 0, "09123456789", new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, "9876543210", "john-primary-key", "00:00-23:59", 0, false, "user-uuid-002" });
-
-            migrationBuilder.InsertData(
-                table: "tbConfigurationPassword",
-                columns: new[] { "Id", "ApplicationId", "CreateDate", "DeleteDate", "DeleteUser", "ExpireDaysAmount", "IsComplex", "IsPolicyNeeded", "MaxPassLength", "MinPassLength", "ModifyDate", "ModifyUser", "MustBeChangedInFirstLogin", "MustContainChar", "MustContainUpperCase", "NumericPassNotEqual", "RedirectToCustomUrlAfterChangePass", "TwoFactorEnabled", "UrlAfterChangePass", "WillPassExpire" },
-                values: new object[] { 1L, 1L, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), new DateTime(9999, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), null, (short)90, false, false, (short)16, (short)8, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, false, false, false, (short)2, false, true, "https://example.com/password-changed", true });
-
-            migrationBuilder.InsertData(
-                table: "tbLoginPolicy",
-                columns: new[] { "Id", "CreateDate", "DeleteDate", "DeleteUser", "LockEndDateTime", "LockStartDateTime", "LockTypes", "ModifyDate", "ModifyUser", "UserId" },
-                values: new object[] { 1L, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, null, new DateTime(2024, 1, 1, 12, 30, 0, 0, DateTimeKind.Utc), new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), (short)5, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, 1L });
-
-            migrationBuilder.InsertData(
-                table: "tbUserRole",
-                columns: new[] { "Id", "CreateDate", "DeleteDate", "DeleteUser", "IsDefault", "ModifyDate", "ModifyUser", "RoleId", "UserId" },
-                values: new object[] { 1L, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, null, false, new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc), null, 1L, 1L });
-
-            migrationBuilder.InsertData(
-                table: "UserProperties",
-                columns: new[] { "UserId", "ConfigurationPasswordId", "Password" },
-                values: new object[] { 1L, 1L, "securepassword123" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_tbActee_ApplicationPackageId",
@@ -709,6 +718,54 @@ namespace ControlPannel.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "tbRole");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_Actee",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_Application",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_ApplicationPackage",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_ConfigurationLock",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_ConfigurationPassword",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_ConfigurationSession",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_Mask",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_Menu",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_Permission",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_Service",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_User",
+                schema: "dbo");
+
+            migrationBuilder.DropSequence(
+                name: "Seq_UserRole",
+                schema: "dbo");
         }
     }
 }

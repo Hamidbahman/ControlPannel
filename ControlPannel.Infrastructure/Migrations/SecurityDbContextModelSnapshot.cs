@@ -22,13 +22,36 @@ namespace ControlPannel.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.HasSequence<int>("Seq_Actee", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_Application", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_ApplicationPackage", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_ConfigurationLock", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_ConfigurationPassword", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_ConfigurationSession", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_Mask", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_Menu", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_Permission", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_Service", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_User", "dbo");
+
+            modelBuilder.HasSequence<int>("Seq_UserRole", "dbo");
+
             modelBuilder.Entity("ControlPannel.Domain.Entities.Actee", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_Actee");
 
                     b.Property<int>("ActeeType")
                         .HasColumnType("int");
@@ -80,9 +103,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_Application");
 
                     b.Property<int>("AuthorizationGrandType")
                         .HasColumnType("int");
@@ -154,35 +176,14 @@ namespace ControlPannel.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("tbApplications");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            AuthorizationGrandType = 3,
-                            ClientId = "client-id-123",
-                            ClientScope = "openid profile",
-                            ClientSecret = "super-secure-secret",
-                            CreateDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "This is the main application for authentication",
-                            IpRange = "192.168.1.0/24",
-                            IsAutoApprove = false,
-                            LockEnabled = true,
-                            ModifyDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            RedirectUrls = "https://example.com/callback",
-                            Scheduled = "00:00-23:59",
-                            Status = 0,
-                            Title = "Main Application"
-                        });
                 });
 
             modelBuilder.Entity("ControlPannel.Domain.Entities.ApplicationPackage", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_ApplicationPackage");
 
                     b.Property<long>("ApplicationId")
                         .HasColumnType("bigint");
@@ -229,9 +230,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_ConfigurationLock");
 
                     b.Property<long>("ApplicationId")
                         .HasColumnType("bigint");
@@ -274,9 +274,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_ConfigurationPassword");
 
                     b.Property<long>("ApplicationId")
                         .HasColumnType("bigint");
@@ -342,38 +341,14 @@ namespace ControlPannel.Infrastructure.Migrations
                     b.HasIndex("ApplicationId");
 
                     b.ToTable("tbConfigurationPassword");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            ApplicationId = 1L,
-                            CreateDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            DeleteDate = new DateTime(9999, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpireDaysAmount = (short)90,
-                            IsComplex = false,
-                            IsPolicyNeeded = false,
-                            MaxPassLength = (short)16,
-                            MinPassLength = (short)8,
-                            ModifyDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            MustBeChangedInFirstLogin = false,
-                            MustContainChar = false,
-                            MustContainUpperCase = false,
-                            NumericPassNotEqual = (short)2,
-                            RedirectToCustomUrlAfterChangePass = false,
-                            TwoFactorEnabled = true,
-                            UrlAfterChangePass = "https://example.com/password-changed",
-                            WillPassExpire = true
-                        });
                 });
 
             modelBuilder.Entity("ControlPannel.Domain.Entities.ConfigurationSession", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_ConfigurationSession");
 
                     b.Property<long>("ApplicationId")
                         .HasColumnType("bigint");
@@ -413,9 +388,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_Mask");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -446,9 +420,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_Menu");
 
                     b.Property<long>("ActeeId")
                         .HasColumnType("bigint");
@@ -543,9 +516,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_Permission");
 
                     b.Property<long>("ActeeId")
                         .HasColumnType("bigint");
@@ -629,9 +601,8 @@ namespace ControlPannel.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Uuid")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("Uuid")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -646,9 +617,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_Service");
 
                     b.Property<long>("ActeeId")
                         .HasColumnType("bigint");
@@ -692,9 +662,8 @@ namespace ControlPannel.Infrastructure.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_User");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -762,10 +731,9 @@ namespace ControlPannel.Infrastructure.Migrations
                     b.Property<bool>("TwoFactor")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Uuid")
-                        .IsRequired()
+                    b.Property<Guid>("Uuid")
                         .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -773,27 +741,6 @@ namespace ControlPannel.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("tbUser");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CreateDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Standard user",
-                            Email = "john.doe@example.com",
-                            FirstName = "John",
-                            IpRange = "0.0.0.0",
-                            LastName = "Doe",
-                            LoginAttempt = 0,
-                            Mobile = "09123456789",
-                            ModifyDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            NationalCode = "9876543210",
-                            PrimaryKey = "john-primary-key",
-                            Scheduled = "00:00-23:59",
-                            Status = 0,
-                            TwoFactor = false,
-                            Uuid = "user-uuid-002"
-                        });
                 });
 
             modelBuilder.Entity("ControlPannel.Domain.Entities.UserBiometric", b =>
@@ -853,23 +800,14 @@ namespace ControlPannel.Infrastructure.Migrations
                     b.HasIndex("ConfigurationPasswordId");
 
                     b.ToTable("UserProperties");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1L,
-                            ConfigurationPasswordId = 1L,
-                            Password = "securepassword123"
-                        });
                 });
 
             modelBuilder.Entity("ControlPannel.Domain.Entities.UserRole", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("bigint")
+                        .HasDefaultValueSql("NEXT VALUE FOR dbo.Seq_UserRole");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -902,17 +840,6 @@ namespace ControlPannel.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("tbUserRole");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CreateDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            IsDefault = false,
-                            ModifyDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            RoleId = 1L,
-                            UserId = 1L
-                        });
                 });
 
             modelBuilder.Entity("controlpannel.domain.Entities.LoginPolicy", b =>
@@ -955,18 +882,6 @@ namespace ControlPannel.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("tbLoginPolicy");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CreateDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            LockEndDateTime = new DateTime(2024, 1, 1, 12, 30, 0, 0, DateTimeKind.Utc),
-                            LockStartDateTime = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            LockTypes = (short)5,
-                            ModifyDate = new DateTime(2024, 1, 1, 12, 0, 0, 0, DateTimeKind.Utc),
-                            UserId = 1L
-                        });
                 });
 
             modelBuilder.Entity("ControlPannel.Domain.Entities.Actee", b =>
